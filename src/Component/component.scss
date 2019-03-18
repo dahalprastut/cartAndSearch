@@ -1,0 +1,113 @@
+.clearfix:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+// for total componenet start
+.for-total{
+    background: #eee;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.income-total, .expenses-total{
+    float: left;
+
+    h2{
+        float: left;
+        margin: 0;
+        color: green;
+    }
+
+    span{
+        float: right;
+        margin: 5px 0 0 10px;
+        border: 2px solid #ccc;
+        padding: 0 20px;
+        
+    }
+}
+
+.expenses-total{
+    float: right;
+
+    h2{
+        color: #99003d;
+    }
+}
+
+
+// for total component ends
+
+
+// for table component starts
+
+.for-table{
+    margin-top: 50px;
+
+    table{
+        border: 0;
+        border-collapse: collapse;
+
+        td{
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    }
+}
+
+
+// for table component ends
+
+
+// for data component starts
+
+
+.for-data{
+    margin-top: 50px;
+    background: #80aaff;
+    padding: 20px;    
+    .get-source , .get-price{
+        float: left;
+
+        h3{
+            margin: 0;
+            float: left;
+            color: green;
+        }
+
+        input{
+            float: right;
+            margin:0px 0 0 10px;
+            height: 22px;
+            padding: 0 20px;    
+        }
+    }
+
+    .get-price{
+        float: left;
+        margin-left: 20px;
+
+     
+    }
+
+    button{
+        background: green;
+        color: #fff;
+        height: 32px;
+        border: none;
+        padding: 0 20px;
+        border-radius: 32px;
+        float: right;
+        margin-top: -5px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover{
+            background: #99003d;
+        }
+    }
+}
+
+
+// for data component ends

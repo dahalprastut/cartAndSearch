@@ -1,25 +1,60 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Total from './Component/Total';
+import Table from './Component/Table';
+import Data from './Component/Data';
 
 class App extends Component {
+
+  state={
+    income:[],
+    expenses:[],
+    savings:true
+  }
+
+  updateTable = (data)=>{
+
+    if(this.state.savings){
+      this.setState({
+        income:[...this.state.income , data],
+      })
+    
+
+    }else{
+      this.setState({
+        expenses:[...this.state.expenses , data],
+        
+      })
+    }
+
+  
+  }
+
+  changeState = ()=>{
+    this.setState({
+      savings:!(this.state.savings)
+      
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className="center">
+        
+          <Total />
+
+          <button onClick = {this.changeState}>{this.state.savings ? 'income' : 'expenses' }</button>
+
+          <Data clicked = {(state)=>this.updateTable(state)}/>
+
+          <div className="clearfix">
+            <Table  tableValue = {this.state.income} />
+            <Table  tableValue = {this.state.expenses} />
+          
+          </div>
+
+        </div>
       </div>
     );
   }

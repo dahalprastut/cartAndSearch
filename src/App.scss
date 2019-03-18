@@ -1,0 +1,23 @@
+body{
+    margin:0;
+}
+
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.center{
+    width: 960px;
+    margin: auto;
+}
+
+Table{
+    float: left;
+    padding: 20px;
+    width: 45%;
+    margin-right: 20px;
+
+}

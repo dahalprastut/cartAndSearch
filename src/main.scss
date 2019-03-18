@@ -1,0 +1,31 @@
+nav{
+    background: #80aaff;
+
+    ul{
+        // float: right;
+        margin: 0;
+        padding: 0;
+
+        li{
+            list-style: none;
+            float: left;
+            margin-left: 18px;
+
+            a{
+                display: block;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 600;
+                text-decoration: none;
+                height: 42px;
+                line-height: 42px;
+
+             &:hover{
+                color: #eee;
+             }   
+            }
+        }
+    }
+
+}
+
